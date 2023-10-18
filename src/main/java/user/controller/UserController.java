@@ -8,6 +8,7 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -100,6 +101,23 @@ public class UserController {
 	public void delete(@RequestParam String filename) {
 		System.out.println(filename);
 		
+		objectStorageService.deleteFile(bucketName, filename);
+		
 		userService.delete(filename);
+	}
+	
+	@GetMapping(value = "updateForm")
+	public String updateForm(@RequestParam String filename, ModelMap model) {
+		model.put("filename", filename);
+		return "/user/updateForm";
+	}
+	
+	@GetMapping(value = "seleteByfilename")
+	@ResponseBody
+	public UserImageDTO seleteByfilename(@RequestParam String filename) {		
+		System.out.println(filename);
+		System.out.println(userService.seleteByfilename(filename));
+		
+		return userService.seleteByfilename(filename);
 	}
 }

@@ -14,4 +14,6 @@ public interface UserService {
 	public List<UserImageDTO> getUploadList();
 
 	public void delete(String filename);
+
+	public UserImageDTO seleteByfilename(String filename);
 }

@@ -12,7 +12,8 @@ $(function(){
 						"alt="` +items.imageName+ `" style="width:70px;"> </td>` +
 						`<td align="center">` + items.imageOriginalName + `</td>` +
 						`<td align="center">` +
-							`<button>수정</button><button onclick="deleteByfileName('` + items.imageFileName + `' )">삭제</button>` +
+							`<button onclick="updateByfileName('` + items.imageFileName + `' )">수정</button>` +
+							`<button onclick="deleteByfileName('` + items.imageFileName + `' )">삭제</button>` +
 						`</td>`+
 						`</tr>`;
 				$('#listTable').append(result);
@@ -40,4 +41,10 @@ function deleteByfileName(filename){
 			location.reload();
 		}
 	})
+}
+
+function updateByfileName(filename){
+	
+	location.href='/springMavenNCP/user/updateForm?filename=' +filename;
+	
 }

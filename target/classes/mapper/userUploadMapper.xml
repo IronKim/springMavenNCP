@@ -19,8 +19,12 @@
  		select * from userimage order by seq desc
  	</select>
  	
- 	<select id="delete" parameterType="String">
+ 	<delete id="delete" parameterType="String">
  		delete from userimage where imageFileName = #{filename}
+ 	</delete>
+ 	
+ 	<select id="seleteByfilename" parameterType="String" resultType="user.bean.UserImageDTO">
+ 		select * from userimage where imageFileName = #{filename}
  	</select>
  	
  </mapper>

@@ -30,5 +30,11 @@ public class UserServiceImpl implements UserService {
 	public void delete(String filename) {
 		userDAO.delete(filename);
 	}
+
+	@Override
+	public UserImageDTO seleteByfilename(String filename) {
+		return userDAO.seleteByfilename(filename);
+		
+	}
 	
 }
