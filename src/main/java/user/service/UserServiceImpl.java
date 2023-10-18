@@ -25,5 +25,10 @@ public class UserServiceImpl implements UserService {
 	public List<UserImageDTO> getUploadList() {
 		return userDAO.getUploadList();
 	}
+
+	@Override
+	public void delete(String filename) {
+		userDAO.delete(filename);
+	}
 	
 }

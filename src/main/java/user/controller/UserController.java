@@ -92,6 +92,14 @@ public class UserController {
 	@ResponseBody
 	@PostMapping(value="getUploadList")
 	public List<UserImageDTO> getUploadList() {
-	return userService.getUploadList();
+		return userService.getUploadList();
+	}
+	
+	@ResponseBody
+	@PostMapping(value="delete")
+	public void delete(@RequestParam String filename) {
+		System.out.println(filename);
+		
+		userService.delete(filename);
 	}
 }

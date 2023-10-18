@@ -20,6 +20,7 @@
 			<th width="100">번호</th>
 			<th width="200">이미지</th>
 			<th width="200">상품명</th>
+			<th width="200">수정/삭제</th>
 		</tr>
 	</table>
 <script src="http://code.jquery.com/jquery-3.7.0.min.js"></script>

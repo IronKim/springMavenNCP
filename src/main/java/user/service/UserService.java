@@ -9,7 +9,9 @@ import user.bean.UserImageDTO;
 @Service
 public interface UserService {
 
-	void upload(List<UserImageDTO> userImageList);
+	public void upload(List<UserImageDTO> userImageList);
 
-	List<UserImageDTO> getUploadList();
+	public List<UserImageDTO> getUploadList();
+
+	public void delete(String filename);
 }
