@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+	굳
 	<button onclick="location.href='/springMavenNCP/user/uploadForm'">업로드</button>
 	<button onclick="location.href='/springMavenNCP/user/uploadList'">목록</button>
 </body>
