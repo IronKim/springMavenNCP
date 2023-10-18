@@ -20,7 +20,7 @@
 </style>
 </head>
 <body>
-	<input type="text" id="filename" value="${filename }"> 
+	<input type="hidden" id="filename" value="${filename }"> 
 	<form id="uploadForm">
 	<table border="1">
 		<tr>
